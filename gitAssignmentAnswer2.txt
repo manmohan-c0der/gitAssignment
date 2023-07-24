@@ -1,0 +1,123 @@
+ans 1
+
+On Windows: Press Win + R, type cmd, and press Enter.
+On macOS: Press Command + Space, type Terminal, and press Enter.
+On Linux: Press Ctrl + Alt + T or search for "Terminal" in your applications.
+
+type command git --version it display the version of git
+
+ans 2
+After running the git init command, Git will create a hidden .git directory in the current folder. This directory contains all the necessary files and subdirectories to manage version control for your project.
+Your new repository is now initialized, and you can start adding files, making commits, and managing your project's version history with Git.
+
+For example, you can add files to the repository using the git add command, make a commit using git commit, and connect your local repository to a remote repository using git remote add origin <remote_url> (replace <remote_url> with the URL of the remote repository).
+
+Remember that you can always use git status to see the current status of your repository and git log to view the commit history.
+
+ans 3
+
+git config --Yist --show-origin
+
+ans 4
+
+To add a file to the staging area in Git, you can use the `git add` command. The staging area is an intermediate step where you prepare your changes before committing them to the repository. When you add files to the staging area, you are telling Git that you want to include those changes in the next commit.
+
+Here's how you can add a file to the staging area:
+
+1. Open a terminal or command prompt.
+
+2. Navigate to the root directory of your Git repository using the `cd` command, if you are not already there.
+
+3. Use the `git status` command to see the current status of your repository. This will show you which files have been modified or are new and not yet staged.
+
+4. To add a specific file to the staging area, use the following command:
+```
+git add <filename>
+```
+Replace `<filename>` with the name of the file you want to add. For example, to add a file named "script.js" to the staging area, you would use:
+```
+git add script.js
+```
+
+5. If you want to add multiple files or add all modified files to the staging area, you can use the following commands:
+- To add all modified files:
+```
+git add --all
+```
+or
+```
+git add -A
+```
+
+- To add all modified and new (untracked) files:
+```
+git add .
+```
+(Note: The dot `.` represents the current directory.)
+
+After using the `git add` command, the specified file(s) will be added to the staging area, and you can proceed to make a commit with `git commit`.
+
+Remember that you can always use `git status` to check the status of your files and see which changes are in the staging area and which ones are not.
+
+ans 5
+
+
+To remove a file from the staging area in Git, you can use the `git reset` command. The `git reset` command allows you to undo or unstage changes that were previously added to the staging area.
+
+Here's how you can remove a file from the staging area:
+
+1. Open a terminal or command prompt.
+
+2. Navigate to the root directory of your Git repository using the `cd` command, if you are not already there.
+
+3. Use the `git status` command to see the current status of your repository. This will show you which files are in the staging area and which files have been modified but not yet staged.
+
+4. To remove a specific file from the staging area, use the following command:
+```
+git reset HEAD <filename>
+```
+Replace `<filename>` with the name of the file you want to remove from the staging area. For example, to remove a file named "script.js" from the staging area, you would use:
+```
+git reset HEAD script.js
+```
+
+5. If you want to remove all files from the staging area and keep the changes in your working directory, you can use the following command:
+```
+git reset HEAD -- .
+```
+(Note: The dot `.` represents the current directory.)
+
+After using the `git reset` command, the specified file(s) will be removed from the staging area, but the changes will still be present in your working directory. This allows you to make further modifications before creating a commit.
+
+Remember that if you want to completely undo the changes made to a file (both in the working directory and the staging area), you can use `git checkout -- <filename>`. This will discard the changes and revert the file to the last committed state. However, be cautious when using `git checkout`, as it's a destructive operation and can't be undone.
+
+As always, use `git status` to check the status of your files and verify that the changes have been removed from the staging area.
+
+
+ans 6
+
+To make a commit in Git, follow these steps:
+
+1. **Stage your changes:** Use the `git add` command to stage the changes you want to include in the commit. For example, to stage all modified files, you can use:
+   ```
+   git add .
+   ```
+
+2. **Commit your changes:** Use the `git commit` command to create a commit with the staged changes. Add a meaningful commit message to describe the changes you made in this commit. The commit message helps others (and your future self) understand the purpose of the commit. Here's the command to commit with a message:
+   ```
+   git commit -m "Your commit message here"
+   ```
+
+That's it! You've now created a commit with the changes you staged. Your commit is a snapshot of your code at that specific point in time. You can continue making changes, staging, and committing them to track the evolution of your project's history.
+
+Remember that it's good practice to create descriptive and concise commit messages, so others can easily understand the changes made in each commit.
+
+ans 7
+
+To push your local changes to the remote repository, in the repository bar, click Push origin. If there are commits on the remote branch that you don't have on your local branch, GitHub Desktop prompts you to fetch new commits from the remote. In the "New Commits on Remote" window, click Fetch.
+
+ans 8
+
+Git clone copies all files to the local machine, while git pull only copies the modified files to the local machine. Git clone creates a connection between both repositories, while git pull requires a connection to be made before it can work.
+
+
